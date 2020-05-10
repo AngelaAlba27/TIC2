@@ -1,0 +1,19 @@
+#include <string.h>
+#include <stdio.h>
+
+int main(){
+    char cadena[200];
+    int numero2;
+
+    printf("Introduzca la palabra: \n");
+    scanf("%s", cadena);
+    printf("\n La  palabra: %s\n\n", cadena);
+    int i = strlen(cadena)-1;
+    printf("La cadena al reves es:\n\t");
+    for (numero2=i; numero2>=0; numero2--){
+        printf("%c", cadena[numero2]);
+    }
+    printf("\n");
+    return 0;
+}
+
