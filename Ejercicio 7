@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+  int calculo;
+  int filas;
+  int posiciones;
+ 
+  printf("Introduzca numero  de Filas : ");
+  scanf(" %d",&filas);
+ 
+  int i = 1;
+  int asteriscos = 1;
+  // bucle para filas
+  for(i=1; i<=filas; i++){
+	int j = 0;
+	// bucle para espacios
+	for(j=0; j<=(filas-i); j++){
+    	printf(" ");
+	}
+    
+	if(i==1){
+    	printf("*");
+	}
+	else{
+    	// bucle para asteriscos
+   	 
+    	asteriscos = asteriscos + 2;
+    	for(j=1; j<=asteriscos; j++){
+        	printf("*");
+    	}
+	}
+	printf("\n");
+  }
+ 
+ /*
+  posiciones=filas*2;
+  for(calculo=1;calculo<=posiciones;calculo+=2) {
+	printf("%*c",posiciones-calculo,'*');
+	for(asteriscos=1;asteriscos<calculo;asteriscos++) {
+    	printf("*");
+	}
+	printf("\n");
+  }
+  */
+  return 0;
+}
