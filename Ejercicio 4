@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+   int horas;
+   int minutos;
+   int segundos;
+ 
+    printf("Por favor , introduzca las horas: ");
+    scanf("%d" , &horas); 
+    
+    printf("Por favor , introduzca las minutos: ");
+    scanf("%d" , &minutos); 
+    
+    printf("Por favor , introduzca las segundos: ");
+    scanf("%d" , &segundos); 
+    
+  if(horas<24&&minutos<60&&segundos<60)  
+  printf("Las horas son correctas"); 
+  
+  else 
+  printf("No es correcto");
+    return 0;   
+}
+
