@@ -1,0 +1,56 @@
+#include <stdio.h>  
+#include <stdlib.h> 
+#include <unistd.h> 
+
+
+
+#define intentos(maximos) 5
+#define inferior 1 
+#define superior 100 
+
+int aleatorio_en_rango(int minimo, int maximo);
+
+
+int main() {
+  
+  int numerosecreto = aleatorio_en_rango(inferior, superior);
+  
+  int contestacion, veces = 0;
+
+  
+   printf("He escogido un número entre %d y %d, por favor puede adivinarlo "
+         "tienes %d veces\n",
+         inferior, superior, intentos(maximos));
+
+    while (1) {
+    veces++;
+    printf("Escribe el número que crees que elegí: ");
+    scanf("%d", &contestacion);
+    if (contestacion == numerosecreto) {
+      printf("SI. El número seleccionado fue %d y número de intentos %d "
+             "veces",
+             numerosecreto, veces);
+      break;
+    } else if (contestacion < numerosecreto) {
+      printf(
+          "NO,  pista: El número seleccionado es mayor que %d\n",
+          contestacion);
+    } else {
+      
+      printf(
+          "NO, pista: el número seleccionado es menor que %d\n",
+          contestacion);
+    }
+		
+    if (veces >= intentos(maximos)) {
+      printf("Has perdido. El número seleccionado ha sido %d", numerosecreto);
+  break;
+    }
+  }
+}
+
+
+int aleatorio_en_rango(int minimo, int maximo) {
+  return minimo + rand() / (RAND_MAX / (maximo - minimo + 1) + 1);
+}
+
