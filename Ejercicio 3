@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    char color; 
+   
+    printf("Por favor , introduzca el color del semaforo: ");
+    printf("1. Verde - 2. Rojo - 3. Ámbar");
+    scanf("%c" , &color); 
+    printf("\n");
+    
+    switch(color){
+        case '3':
+            printf("Pase cautelosamente ");
+            break;
+        case '1':
+            printf("Puede pasar ");
+            break;
+        case '2':
+            printf("No puede pasar");
+        default: 
+            printf("HA COMETIDO UN ERROR");
+    }   
+    return 0;
+}
