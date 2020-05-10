@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+   int i, numero1;
+   printf("Por favor, introduzca el primer numero: ");
+   scanf("%d", &numero1);
+   printf("\n");
+   for (i=1 ; i<=numero1; i++){
+        printf("El cuadrado de %d es: %d\n" , i, i*i);
+   }
+
+   return 0;
+    
+}
