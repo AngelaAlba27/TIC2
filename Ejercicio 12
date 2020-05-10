@@ -1,0 +1,33 @@
+#include <stdio.h> 
+
+int opcion1;
+int opcion2; 
+void intercambio (int*opcion1 ,int*opcion2){
+    
+    int aux = *opcion1; 
+    
+    *opcion1= *opcion2;
+    
+    *opcion2=aux; 
+    
+}
+int main()
+{ 
+   
+   
+    int opcion1; 
+    int opcion2; 
+    printf("Por favor ,introduce la opción 1:");
+    scanf("%d",&opcion1); 
+    
+    printf("Por favor,introduce la opción 2:") 
+    scanf("%d",&opcion2)
+    intercambio(&opcion1,&opcion2); 
+    printf("El intercambio realizado es:la opcion1 es %d de la opcion2 que es %d",opcion1,opcion2); 
+    
+    
+    
+    return 0;
+}
+
+
