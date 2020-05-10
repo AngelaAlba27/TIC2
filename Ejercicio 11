@@ -1,0 +1,57 @@
+#include <stdio.h> 
+
+
+char nombre[10];  
+int años;
+struct persona{ 
+
+ 
+} 
+
+int main() 
+
+{ 
+    struct persona conjunto[3]; 
+    
+    printf("Por favor ,introduce el nombre de la primera persona:");
+    scanf("%s",&conjunto[0].nombre); 
+    printf("\n");
+    
+    
+    printf("Por favor ,introduce los años de la primera persona:");
+    scanf("%d",&conjunto[0].años); 
+    printf("\n");
+    
+    
+    printf("Por favor ,introduce el nombre de la segunda persona:");
+    scanf("%s",&conjunto[1].nombre); 
+    printf("\n"); 
+    
+    
+    
+    printf("Por favor ,introduce los años de la segunda persona:");
+    scanf("%d",&conjunto[1].años); 
+    printf("\n"); 
+    
+    
+    
+    printf("Por favor ,introduce el nombre de la tercera persona:");
+    scanf("%s",&conjunto[2].nombre); 
+    printf("\n"); 
+    
+    
+    printf("Por favor ,introduce los años de la tercera persona:");
+    scanf("%d",&conjunto[2].años); 
+    printf("\n"); 
+    
+   int i=0; 
+    while(i<=2){ 
+    if(conjunto[i].años>=18){ 
+    printf("Estos son los mayores de edad:%s\n",conjunto[i].nombre);
+} 
+    i++;
+}  
+    return 0;
+}
+
+
