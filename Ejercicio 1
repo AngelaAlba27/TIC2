@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+   int horas;
+   int minutos;
+   int segundos;
+ 
+    printf("Por favor , introduzca las horas: ");
+    scanf("%d" , &horas);
+    printf("\n");
+
+    printf("Por favor , introduzca los minutos: ");
+    scanf("%d" , &minutos) ;
+    printf("\n");
+    
+    printf("Por favor , introduzca los segundos: ");
+    scanf("%d" , &segundos) ;
+    printf("\n");
+    
+    int s_horas = horas * 3600;
+    printf("En segundos es : %d\n" , s_horas);  
+    
+    int s_minutos = minutos * 60;
+    printf("En segundos es : %d\n" , s_minutos);   
+    
+    int suma = s_horas + s_minutos + segundos ;
+    printf("los segundos totales son : %d" , suma);
+    
+    return 0;   
+}
+
+
